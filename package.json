@@ -1,6 +1,6 @@
 {
     "name": "ipfs-http-client-minimal",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "IPFS HTTP-API Module",
     "scripts": {
         "prebuild": "rimraf dist",
@@ -11,16 +11,9 @@
     "author": "Franz Geffke <franz@pantherx.org>",
     "license": "MIT",
     "dependencies": {
-        "@golevelup/nestjs-modules": "^0.6.1",
-        "@nestjs/common": "^9.1.6",
-        "@nestjs/core": "^9.1.6",
-        "@nestjs/platform-express": "^9.1.6",
-        "@nestjs/testing": "^9.1.6",
         "axios": "^1.6.7",
-        "multiformats": "^13.0.1",
         "reflect-metadata": "^0.1.13",
-        "rimraf": "^3.0.2",
-        "rxjs": "^7.5.7"
+        "rimraf": "^3.0.2"
     },
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",

@@ -80,4 +80,17 @@ export class IPFSHTTPClient {
         const res = await this.dhtStat({})
         return res.find((item) => item.Name === 'wan') !== undefined
     }
+
+    /**
+     * Return JSON from IPFS URI
+     * Use only if you know that you are fetching JSON
+     * @param uri ipfs://<hash>
+     * @returns
+     */
+    async jsonFromUri(uri: string) {
+        const data = await this.cat({
+            arg: uri.replace('ipfs://', ''),
+        })
+        return data
+    }
 }

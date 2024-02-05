@@ -37,5 +37,10 @@ describe('General tests', () => {
         expect(downloadRes).toStrictEqual({
             id: 'abc',
         })
+
+        const downloadRes2 = await client.jsonFromUri(`ipfs://${uploadRes.Hash}`)
+        expect(downloadRes2).toStrictEqual({
+            id: 'abc',
+        })
     })
 })
